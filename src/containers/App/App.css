@@ -1,5 +1,10 @@
-#root {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
