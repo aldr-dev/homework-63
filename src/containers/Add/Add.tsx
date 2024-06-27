@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import './PostAndEditForm.css';
+import './Add.css';
 import {DataForm, MutationDataForm} from '../../types';
 import axiosApi from '../../axiosApi';
-import ErrorStatus from '../ErrorStatus/ErrorStatus';
+import ErrorStatus from '../../components/ErrorStatus/ErrorStatus';
 
-const PostAndEditForm = () => {
+const Add = () => {
   const [data, setData] = useState<DataForm>({
     title: '',
     description: '',
@@ -28,9 +28,9 @@ const PostAndEditForm = () => {
 
   const onFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    const formData: MutationDataForm = {
-      data: data,
-      datetime: new Date(new Date().toLocaleString('en-US', {timeZone: 'Asia/Bishkek'})).toISOString(),
+    const datetime = new Date(new Date().toLocaleString('en-US', {timeZone: 'Asia/Bishkek'})).toISOString();
+    const formData: MutationDataForm  = {
+      data: {...data, datetime},
     };
 
     setData({
@@ -99,4 +99,4 @@ const PostAndEditForm = () => {
   );
 };
 
-export default PostAndEditForm;
+export default Add;

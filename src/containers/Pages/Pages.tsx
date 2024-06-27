@@ -1,9 +1,10 @@
 import Header from '../../components/Header/Header';
 import {Route, Routes} from 'react-router-dom';
 import PageNotFound from '../PageNotFound/PageNotFound';
-import PostAndEditForm from '../../components/PostAndEditForm/PostAndEditForm';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
+import Add from '../Add/Add';
+import Home from '../Home/Home';
 
 const Pages = () => {
   return (
@@ -11,8 +12,14 @@ const Pages = () => {
       <Header />
       <main className="container">
         <Routes>
+          <Route path="/" element={
+            <Home />
+          }/>
+          <Route path="/posts" element={
+            <Home />
+          }/>
           <Route path="new-post" element={
-            <PostAndEditForm />
+            <Add />
           }/>
           <Route path="about" element={
             <About />
