@@ -5,6 +5,7 @@ import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
 import Add from '../Add/Add';
 import Home from '../Home/Home';
+import ReadMore from '../ReadMore/ReadMore';
 
 const Pages = () => {
   return (
@@ -26,6 +27,9 @@ const Pages = () => {
            }/>
           <Route path="contacts" element={
             <Contacts />
+          }/>
+          <Route path="/posts/:id" element={
+            <ReadMore />
           }/>
           <Route path="*" element={
             <PageNotFound />

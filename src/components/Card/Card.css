@@ -25,10 +25,54 @@
   color: #fff;
   border-radius: 5px;
   padding: 10px 15px;
-  transition: .3s ease-in-out;
   font-size: 15px;
+  border: none;
+  cursor: pointer;
+  margin-right: 40px;
+  transition: .3s ease-in-out;
 }
 
-.card-more-btn:hover {
+.card-more-btn:hover, .card-btn-edit:hover {
   background: #174173;
 }
+
+.card-btn-delete {
+  border: none;
+  background: #e74c3c;
+  color: #ffff;
+  border-radius: 5px;
+  width: 80px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s ease-in-out;
+}
+
+.card-btn-delete:hover {
+  background: #b24135;
+}
+
+.card-btn-delete:disabled {
+  background: rgba(231, 76, 60, .8);
+}
+
+.card-btn-delete:disabled:hover {
+  background: rgba(231, 76, 60, .8);
+}
+
+.card-btn-edit {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #2c5898;
+  border-radius: 5px;
+  padding: 8px 25px;
+  transition: .3s ease-in-out;
+}
+
+.btn-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+

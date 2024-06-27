@@ -25,11 +25,14 @@ const Home = () => {
           setIsError(true);
           throw new Error('An error occurred while receiving data. ' + response.status);
         }
-        const dataArray: MutationPosts[] = Object.entries(response.data).map(([id, item]) => ({
-          id,
-          ...item.data
-        }));
-        setPosts(dataArray);
+
+        if (response.data !== null) {
+          const dataArray: MutationPosts[] = Object.entries(response.data).map(([id, item]) => ({
+            id,
+            ...item.data
+          }));
+          setPosts(dataArray);
+        }
       } catch (error) {
         setIsError(true);
         setIsLoader(false);
