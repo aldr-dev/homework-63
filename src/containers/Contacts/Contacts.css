@@ -1,0 +1,30 @@
+.contacts-title {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.contacts-email, .contacts-phone, .contacts-address, .contacts-media {
+  margin-bottom: 20px;
+}
+
+.email-title, .phone-title, .address-title, .media-title {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.email-desc, .phone-desc, .address-desc, .media-desc {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contacts-link {
+  display: block;
+  color: #2c5898;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.address-info {
+  display: block;
+  margin-top: 10px;
+}
