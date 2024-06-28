@@ -31,6 +31,9 @@ const Pages = () => {
           <Route path="/posts/:id" element={
             <ReadMore />
           }/>
+          <Route path="/posts/:id/edit" element={
+            <Add />
+          }/>
           <Route path="*" element={
             <PageNotFound />
           }/>
